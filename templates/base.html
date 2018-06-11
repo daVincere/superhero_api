@@ -1,0 +1,13 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SuperHero API</title>
+</head>
+<body>
+	<form method="POST" enctype="multipart">{% csrf_token %}
+		{{ form | crispy }}
+		<input class="btn btn-submit" type="submit" name="">
+	</form>
+</body>
+</html>

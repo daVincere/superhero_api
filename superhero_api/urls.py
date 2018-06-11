@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from main import views
 from api import urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api', include('api.urls'))
+    url(r'^$', views.superhero_entry, name="base"),
+    url(r'^api', include('api.urls')),
 ]
